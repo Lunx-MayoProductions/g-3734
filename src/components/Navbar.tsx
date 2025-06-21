@@ -28,24 +28,22 @@ const Navbar = () => {
       <div className="container max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/ce207080-f6c2-430d-9621-79d32ab08655.png" 
-              alt="Convrt.ai Logo" 
-              className="h-8 md:h-10"
-            />
+            <div className="text-2xl font-bold text-convrt-dark-blue">
+              React Hosting
+            </div>
           </a>
         </div>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#how-it-works" className="text-convrt-dark-blue/80 hover:text-convrt-dark-blue font-medium transition-colors">
-            How It Works
+            Features
           </a>
           <a href="#testimonials" className="text-convrt-dark-blue/80 hover:text-convrt-dark-blue font-medium transition-colors">
-            Case Studies
+            Success Stories
           </a>
           <a href="#product" className="text-convrt-dark-blue/80 hover:text-convrt-dark-blue font-medium transition-colors">
-            Product
+            Platform
           </a>
           <a href="#pricing" className="text-convrt-dark-blue/80 hover:text-convrt-dark-blue font-medium transition-colors">
             Pricing
@@ -73,21 +71,21 @@ const Navbar = () => {
               className="text-convrt-dark-blue/80 hover:text-convrt-dark-blue font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              How It Works
+              Features
             </a>
             <a 
               href="#testimonials" 
               className="text-convrt-dark-blue/80 hover:text-convrt-dark-blue font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Case Studies
+              Success Stories
             </a>
             <a 
               href="#product" 
               className="text-convrt-dark-blue/80 hover:text-convrt-dark-blue font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Product
+              Platform
             </a>
             <a 
               href="#pricing" 
