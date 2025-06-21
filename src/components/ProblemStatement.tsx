@@ -7,23 +7,23 @@ const ProblemStatement = () => {
   const problems = [
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Slow Loading Times",
-      description: "Traditional hosting platforms leave your React apps crawling with 3-5 second load times, driving users away before they even see your content."
+      title: "High Latency & Lag",
+      description: "Traditional hosting providers leave your game servers with 200ms+ ping times, causing frustrating lag spikes that drive players away from your servers."
     },
     {
       icon: <Server className="w-8 h-8" />,
-      title: "Complex Deployment",
-      description: "Hours spent configuring servers, managing build processes, and wrestling with deployment pipelines instead of building amazing features."
+      title: "Complex Server Setup",
+      description: "Hours spent configuring game servers, managing mods, and wrestling with control panels instead of focusing on building your gaming community."
     },
     {
       icon: <TrendingDown className="w-8 h-8" />,
-      title: "Poor Performance",
-      description: "Shared hosting resources and outdated infrastructure cause your React apps to lag, especially during traffic spikes."
+      title: "Poor Gaming Performance",
+      description: "Shared hosting resources and outdated infrastructure cause your game servers to stutter and websites to crawl, especially during peak gaming hours."
     },
     {
       icon: <AlertCircle className="w-8 h-8" />,
-      title: "Downtime Issues",
-      description: "Unreliable hosting providers mean your apps go offline when your users need them most, damaging your reputation."
+      title: "Server Downtime",
+      description: "Unreliable hosting providers mean your game servers go offline during critical gaming sessions, frustrating your players and damaging your reputation."
     }
   ];
 
@@ -39,16 +39,16 @@ const ProblemStatement = () => {
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-50 text-red-600 mb-6">
             <AlertCircle className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">The React Hosting Problem</span>
+            <span className="text-sm font-medium">The Gaming Hosting Problem</span>
           </div>
           
           <h2 className="heading-lg text-convrt-dark-blue mb-6">
-            Why Most React Apps Are 
-            <span className="text-red-500 font-extrabold"> Painfully Slow</span>
+            Why Most Game Servers Are 
+            <span className="text-red-500 font-extrabold"> Painfully Laggy</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Developers spend countless hours building amazing React applications, only to watch them fail due to poor hosting choices. Here's what's holding your apps back.
+            Gamers and developers spend countless hours building amazing gaming experiences, only to watch them fail due to poor hosting choices. Here's what's holding your servers back.
           </p>
         </motion.div>
 
@@ -84,20 +84,20 @@ const ProblemStatement = () => {
         >
           <div className="bg-gray-50 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-convrt-dark-blue mb-4">
-              The Cost of Slow React Hosting
+              The Cost of Laggy Game Servers
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-500 mb-2">40%</div>
-                <p className="text-gray-600">Users abandon sites that take over 3 seconds to load</p>
+                <div className="text-3xl font-bold text-red-500 mb-2">75%</div>
+                <p className="text-gray-600">Players quit servers with over 150ms ping</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-500 mb-2">70%</div>
-                <p className="text-gray-600">Drop in conversions due to slow page speeds</p>
+                <div className="text-3xl font-bold text-red-500 mb-2">60%</div>
+                <p className="text-gray-600">Drop in player retention due to server lag</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-500 mb-2">$2.6B</div>
-                <p className="text-gray-600">Lost annually due to slow e-commerce sites</p>
+                <div className="text-3xl font-bold text-red-500 mb-2">€500M</div>
+                <p className="text-gray-600">Lost annually in EU gaming revenue due to poor hosting</p>
               </div>
             </div>
           </div>

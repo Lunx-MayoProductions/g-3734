@@ -6,34 +6,34 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "Frontend Developer",
-      company: "TechStart Inc.",
-      content: "React Hosting transformed our deployment process. What used to take hours now takes minutes, and our app performance has never been better. The global CDN makes our React app lightning fast worldwide.",
+      name: "Max Schmidt",
+      role: "Minecraft Server Owner",
+      company: "GermanCraft Network",
+      content: "ReactHosting.de transformed our Minecraft server performance. What used to be 150ms ping is now under 30ms, and our player count doubled! The German support team is incredibly helpful.",
       rating: 5,
       avatar: "/lovable-uploads/50d7bc89-98fd-49a5-b67f-94230c5d3ca5.png"
     },
     {
-      name: "Marcus Rodriguez",
-      role: "Full Stack Developer",
-      company: "Digital Agency Pro",
-      content: "I've tried every React hosting solution out there. React Hosting is hands down the best - zero configuration, instant deploys, and incredible performance. My clients are thrilled with the speed improvements.",
+      name: "Lisa Weber",
+      role: "Game Developer",
+      company: "Indie Game Studios",
+      content: "I've tried every game hosting solution in Europe. ReactHosting.de is hands down the best - zero configuration, instant deploys, and incredible performance. My game website loads instantly now.",
       rating: 5,
       avatar: "/lovable-uploads/8324ce9d-a25b-4480-beb0-990b38071d97.png"
     },
     {
-      name: "Emily Watson",
-      role: "CTO",
-      company: "StartupLab",
-      content: "As a startup, we needed reliable React hosting that could scale with us. React Hosting delivered beyond our expectations - our bounce rate dropped 40% just from the performance improvements alone.",
+      name: "Tom Müller",
+      role: "Esports Team Manager",
+      company: "Berlin Eagles",
+      content: "As an esports team, we needed reliable CS2 servers that could handle our training sessions. ReactHosting.de delivered beyond expectations - our team's reaction time improved significantly.",
       rating: 5,
       avatar: "/lovable-uploads/ce207080-f6c2-430d-9621-79d32ab08655.png"
     },
     {
-      name: "David Kim",
-      role: "Lead Developer",
-      company: "E-commerce Plus",
-      content: "The difference React Hosting made to our e-commerce site is incredible. Page load times went from 4 seconds to under 1 second. Our conversion rates increased by 35% immediately after switching.",
+      name: "Anna Hoffmann",
+      role: "Gaming Community Admin",
+      company: "German Rust Community",
+      content: "The difference ReactHosting.de made to our Rust servers is incredible. Player complaints about lag dropped to zero, and our community website performance increased our member signups by 40%.",
       rating: 5,
       avatar: "/lovable-uploads/ceb0d5d2-2d83-407f-bb1e-8f6959b93eb9.png"
     }
@@ -55,12 +55,12 @@ const Testimonials = () => {
           </div>
           
           <h2 className="heading-lg text-convrt-dark-blue mb-6">
-            Developers Love 
-            <span className="text-convrt-purple font-extrabold"> React Hosting</span>
+            German Gamers Love 
+            <span className="text-convrt-purple font-extrabold"> ReactHosting.de</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join thousands of developers who've transformed their React app performance with our lightning-fast hosting platform.
+            Join thousands of gamers and developers across Germany and Europe who've transformed their gaming experience with our lightning-fast hosting platform.
           </p>
         </motion.div>
 
@@ -113,10 +113,10 @@ const Testimonials = () => {
         >
           <div className="bg-gradient-to-r from-convrt-purple to-convrt-purple-light rounded-2xl p-8 text-white max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
-              Join 10,000+ Happy React Developers
+              Join 5,000+ Happy German Gamers
             </h3>
             <p className="text-lg opacity-90 mb-6">
-              Experience the difference lightning-fast hosting makes for your React applications
+              Experience the difference lightning-fast hosting makes for your game servers and websites
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
@@ -124,8 +124,8 @@ const Testimonials = () => {
                 <p className="opacity-80">Average Rating</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">10,000+</div>
-                <p className="opacity-80">Apps Deployed</p>
+                <div className="text-3xl font-bold mb-2">5,000+</div>
+                <p className="opacity-80">Servers Deployed</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">99.9%</div>

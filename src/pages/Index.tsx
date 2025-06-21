@@ -53,7 +53,7 @@ const Index = () => {
               <div className="absolute inset-0 z-0">
                 <img 
                   src="/lovable-uploads/eada8c8b-332c-4ac7-813d-42884f942368.png" 
-                  alt="React Development Team" 
+                  alt="Game Server Development Team" 
                   className="w-full h-full object-cover object-center opacity-50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-convrt-dark-blue via-convrt-dark-blue/90 to-convrt-dark-blue/80"></div>
@@ -69,25 +69,25 @@ const Index = () => {
                 >
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-convrt-purple/20 text-convrt-purple mb-6">
                     <Sparkles className="w-4 h-4 mr-2" />
-                    <span className="text-sm font-medium font-inter tracking-wide">Start Your React Journey Today</span>
+                    <span className="text-sm font-medium font-inter tracking-wide">Start Your Gaming Journey Today</span>
                   </div>
                   
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                     Ready to Move from 
-                    <span className="text-[#EA384C] font-extrabold"> Slow </span> 
+                    <span className="text-[#EA384C] font-extrabold"> Laggy </span> 
                     to 
                     <span className="text-convrt-purple font-extrabold"> Lightning Fast</span>?
                   </h2>
                   
                   <p className="text-lg text-gray-100 mb-8">
-                    Join thousands of developers who have chosen React Hosting for blazing-fast React applications.
+                    Join thousands of gamers and developers who have chosen ReactHosting.de for blazing-fast game servers and websites.
                   </p>
                   
                   <div className="flex flex-col space-y-3 mb-8">
                     {[
-                      "99.9% uptime guarantee with global CDN",
-                      "Deploy in seconds with Git integration",
-                      "Auto-scaling for traffic spikes"
+                      "99.9% uptime guarantee with global servers",
+                      "Deploy game servers in seconds with one-click setup",
+                      "Auto-scaling for traffic spikes and player surges"
                     ].map((benefit, i) => (
                       <div key={i} className="flex items-center">
                         <Check className="w-5 h-5 text-convrt-purple mr-2 flex-shrink-0" />
@@ -123,8 +123,8 @@ const Index = () => {
               viewport={{ once: true }}
               className="mb-6 md:mb-0"
             >
-              <h3 className="text-2xl font-bold text-convrt-dark-blue">React Hosting</h3>
-              <p className="text-sm text-gray-600 mt-2">© {new Date().getFullYear()} React Hosting. All rights reserved.</p>
+              <h3 className="text-2xl font-bold text-convrt-dark-blue">ReactHosting.de</h3>
+              <p className="text-sm text-gray-600 mt-2">© {new Date().getFullYear()} ReactHosting.de - Game Servers & Websites. All rights reserved.</p>
             </motion.div>
             
             <motion.div 

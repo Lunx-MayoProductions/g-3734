@@ -7,29 +7,29 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: <Upload className="w-8 h-8" />,
-      title: "Connect Your Repo",
-      description: "Link your GitHub repository or upload your React project directly. We support all React frameworks including Next.js, Vite, and Create React App.",
+      title: "Choose Your Server",
+      description: "Select from Minecraft, CS2, Rust, ARK, or any game server. Upload your website files or connect your repository with one-click deployment.",
       color: "bg-blue-500",
       delay: 0
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Lightning Deploy",
-      description: "Our optimized build system deploys your React app in under 30 seconds with automatic code splitting and performance optimization.",
+      title: "Instant Deployment",
+      description: "Our German datacenter deploys your game servers and websites in under 30 seconds with automatic optimization and mod support.",
       color: "bg-convrt-purple",
       delay: 0.2
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Global CDN",
-      description: "Your app is instantly distributed across our global edge network, ensuring blazing-fast load times for users worldwide.",
+      title: "European Network",
+      description: "Your servers are distributed across our European edge network, ensuring sub-50ms ping times for players across Germany and EU.",
       color: "bg-green-500",
       delay: 0.4
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Monitor & Scale",
-      description: "Real-time analytics and automatic scaling ensure your React app performs perfectly as your traffic grows.",
+      description: "Real-time server monitoring and automatic scaling ensure your game servers perform perfectly as your player base grows.",
       color: "bg-orange-500",
       delay: 0.6
     }
@@ -47,16 +47,16 @@ const HowItWorks = () => {
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-convrt-purple/10 text-convrt-purple mb-6">
             <Zap className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">How React Hosting Works</span>
+            <span className="text-sm font-medium">How ReactHosting.de Works</span>
           </div>
           
           <h2 className="heading-lg text-convrt-dark-blue mb-6">
-            From Code to 
-            <span className="text-convrt-purple font-extrabold"> Lightning Fast</span> in Minutes
+            From Setup to 
+            <span className="text-convrt-purple font-extrabold"> Game-Ready</span> in Minutes
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Deploy your React applications with zero configuration and maximum performance. Our platform handles all the complexity so you can focus on building great features.
+            Deploy your game servers and websites with zero configuration and maximum performance. Our platform handles all the complexity so you can focus on building your gaming community.
           </p>
         </motion.div>
 
@@ -106,20 +106,20 @@ const HowItWorks = () => {
         >
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-convrt-dark-blue mb-6">
-              Why Developers Choose React Hosting
+              Why Gamers Choose ReactHosting.de
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-convrt-purple mb-2">{"< 30s"}</div>
-                <p className="text-gray-600 font-medium">Average Deploy Time</p>
+                <div className="text-4xl font-bold text-convrt-purple mb-2">{"< 50ms"}</div>
+                <p className="text-gray-600 font-medium">Average Ping Time in EU</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-convrt-purple mb-2">99.9%</div>
-                <p className="text-gray-600 font-medium">Uptime Guarantee</p>
+                <p className="text-gray-600 font-medium">Server Uptime Guarantee</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-convrt-purple mb-2">180+</div>
-                <p className="text-gray-600 font-medium">Global Edge Locations</p>
+                <div className="text-4xl font-bold text-convrt-purple mb-2">24/7</div>
+                <p className="text-gray-600 font-medium">German Support Team</p>
               </div>
             </div>
           </div>

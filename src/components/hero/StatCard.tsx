@@ -21,7 +21,7 @@ const StatCard: React.FC<StatCardProps> = ({ value, description, icon }) => {
           {description}
         </div>
         <div className="text-convrt-dark-blue/60 text-sm mt-2 relative z-10 leading-relaxed">
-          Deploy React apps with lightning speed and maximum performance
+          Deploy game servers and websites with lightning speed and zero lag
         </div>
       </div>
     </div>

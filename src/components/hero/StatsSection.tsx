@@ -40,8 +40,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ statsRef }) => {
     >
       <motion.div variants={itemVariants}>
         <StatCard 
-          value="5x" 
-          description="Faster Deploy Times" 
+          value="<50ms" 
+          description="Average Ping in EU" 
           icon={<Zap className="w-8 h-8" />} 
         />
       </motion.div>
@@ -49,15 +49,15 @@ const StatsSection: React.FC<StatsSectionProps> = ({ statsRef }) => {
       <motion.div variants={itemVariants}>
         <StatCard 
           value="99.9%" 
-          description="Uptime Guarantee" 
+          description="Server Uptime" 
           icon={<Globe className="w-8 h-8" />} 
         />
       </motion.div>
       
       <motion.div variants={itemVariants}>
         <StatCard 
-          value="40%" 
-          description="Performance Improvement" 
+          value="5x" 
+          description="Faster Game Performance" 
           icon={<TrendingUp className="w-8 h-8" />} 
         />
       </motion.div>

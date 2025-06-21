@@ -47,21 +47,21 @@ const Hero = () => {
             className="inline-flex items-center px-4 py-2 rounded-full bg-convrt-purple/10 text-convrt-purple mb-6"
           >
             <Zap className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium font-inter tracking-wide">The Fastest React Hosting Platform</span>
+            <span className="text-sm font-medium font-inter tracking-wide">Germany's Fastest Game Server & Website Hosting</span>
           </motion.div>
           
           <motion.h1 
             variants={itemVariants}
             className="font-inter font-bold text-4xl md:text-5xl lg:text-7xl tracking-tight max-w-4xl mx-auto mb-6 text-convrt-dark-blue leading-[1.1]"
           >
-            From <span className="text-[#EA384C] font-extrabold">Slow</span> to <span className="text-[#6936F5] font-extrabold">Lightning Fast</span>
+            From <span className="text-[#EA384C] font-extrabold">Laggy</span> to <span className="text-[#6936F5] font-extrabold">Lightning Fast</span>
           </motion.h1>
           
           <motion.p 
             variants={itemVariants}
             className="font-inter text-xl text-convrt-dark-blue/80 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
-            Deploy your React apps instantly with our blazing-fast hosting platform. Zero configuration, maximum performance.
+            Deploy your game servers and websites instantly with ReactHosting.de. Zero lag, maximum performance for gamers and developers across Europe.
           </motion.p>
           
           <motion.div 
