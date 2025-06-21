@@ -110,7 +110,7 @@ const HowItWorks = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-convrt-purple mb-2">< 30s</div>
+                <div className="text-4xl font-bold text-convrt-purple mb-2">{"< 30s"}</div>
                 <p className="text-gray-600 font-medium">Average Deploy Time</p>
               </div>
               <div className="text-center">
