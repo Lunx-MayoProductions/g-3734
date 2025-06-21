@@ -1,198 +1,106 @@
 
 import React from 'react';
-import { X, Check, PhoneCall, Mail, MessageSquare, Users, Zap, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Clock, AlertCircle, TrendingDown, Server } from 'lucide-react';
 
 const ProblemStatement = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.3
-      }
+  const problems = [
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "Slow Loading Times",
+      description: "Traditional hosting platforms leave your React apps crawling with 3-5 second load times, driving users away before they even see your content."
+    },
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: "Complex Deployment",
+      description: "Hours spent configuring servers, managing build processes, and wrestling with deployment pipelines instead of building amazing features."
+    },
+    {
+      icon: <TrendingDown className="w-8 h-8" />,
+      title: "Poor Performance",
+      description: "Shared hosting resources and outdated infrastructure cause your React apps to lag, especially during traffic spikes."
+    },
+    {
+      icon: <AlertCircle className="w-8 h-8" />,
+      title: "Downtime Issues",
+      description: "Unreliable hosting providers mean your apps go offline when your users need them most, damaging your reputation."
     }
-  };
-
-  const itemVariants = {
-    hidden: { y: 40, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
-    }
-  };
+  ];
 
   return (
-    <section className="relative py-16 overflow-hidden bg-white" id="problem">
-      <div className="container-section relative z-10">
-        <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-          className="max-w-3xl mx-auto text-center mb-12"
+    <section className="py-24 bg-white" id="problem">
+      <div className="container-section">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          <motion.div variants={itemVariants} className="section-tag">
-            Why Traditional Outbound Is Dead
-          </motion.div>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-50 text-red-600 mb-6">
+            <AlertCircle className="w-4 h-4 mr-2" />
+            <span className="text-sm font-medium">The React Hosting Problem</span>
+          </div>
           
-          <motion.h2 
-            variants={itemVariants}
-            className="heading-lg text-convrt-dark-blue mb-6"
-          >
-            Cold Outreach Doesn't Work Anymore. <br />
-            <span className="text-convrt-purple font-extrabold">AI Organic Outbound</span> Does.
-          </motion.h2>
+          <h2 className="heading-lg text-convrt-dark-blue mb-6">
+            Why Most React Apps Are 
+            <span className="text-red-500 font-extrabold"> Painfully Slow</span>
+          </h2>
           
-          <motion.p 
-            variants={itemVariants}
-            className="text-convrt-dark-blue/80 text-lg mb-8 max-w-2xl mx-auto"
-          >
-            The days of cold calls and emails are over. Today's buyers expect personalized engagement from people they trust. Convrt.ai puts you exactly where your buyers make decisions.
-          </motion.p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Developers spend countless hours building amazing React applications, only to watch them fail due to poor hosting choices. Here's what's holding your apps back.
+          </p>
         </motion.div>
-        
-        <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-          className="grid md:grid-cols-2 gap-10"
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {problems.map((problem, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              <div className="text-red-500 mb-4">
+                {problem.icon}
+              </div>
+              <h3 className="text-xl font-bold text-convrt-dark-blue mb-3">
+                {problem.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {problem.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
         >
-          {/* Traditional Cold Outbound - simplified box */}
-          <motion.div 
-            variants={itemVariants}
-            whileHover={{ y: -5 }}
-            className="bg-[#F9F6F3] rounded-[20px] p-8 border border-gray-100 relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 bg-red-50 px-4 py-2 rounded-bl-2xl">
-              <X className="w-5 h-5 text-[#EA384C]" />
-            </div>
-            
-            <h3 className="heading-sm text-convrt-dark-blue mb-8 flex items-center">
-              Traditional Cold Outbound
+          <div className="bg-gray-50 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-convrt-dark-blue mb-4">
+              The Cost of Slow React Hosting
             </h3>
-            
-            <ul className="space-y-6">
-              <li className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-4">
-                  <X className="w-4 h-4 text-[#EA384C]" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg text-convrt-dark-blue">1% cold email response rates</p>
-                  <p className="text-convrt-dark-blue/70 mt-1">Millions of emails sent, almost all ignored</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-4">
-                  <X className="w-4 h-4 text-[#EA384C]" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg text-convrt-dark-blue">80% of calls screened out</p>
-                  <p className="text-convrt-dark-blue/70 mt-1">Decision makers don't take cold calls</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mt-0.5 mr-4">
-                  <X className="w-4 h-4 text-[#EA384C]" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg text-convrt-dark-blue">No relationship before outreach</p>
-                  <p className="text-convrt-dark-blue/70 mt-1">Cold outreach feels impersonal and salesy</p>
-                </div>
-              </li>
-            </ul>
-            
-            <div className="mt-12 grid grid-cols-3 gap-4">
-              <div className="aspect-square flex flex-col items-center justify-center bg-red-50 rounded-xl p-3">
-                <PhoneCall className="w-8 h-8 text-[#EA384C] mb-2" />
-                <div className="text-sm text-center text-[#EA384C] font-medium">Cold Calls</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-500 mb-2">40%</div>
+                <p className="text-gray-600">Users abandon sites that take over 3 seconds to load</p>
               </div>
-              
-              <div className="aspect-square flex flex-col items-center justify-center bg-red-50 rounded-xl p-3">
-                <Mail className="w-8 h-8 text-[#EA384C] mb-2" />
-                <div className="text-sm text-center text-[#EA384C] font-medium">Mass Emails</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-500 mb-2">70%</div>
+                <p className="text-gray-600">Drop in conversions due to slow page speeds</p>
               </div>
-              
-              <div className="aspect-square flex flex-col items-center justify-center bg-red-50 rounded-xl p-3">
-                <MessageSquare className="w-8 h-8 text-[#EA384C] mb-2" />
-                <div className="text-sm text-center text-[#EA384C] font-medium">Generic Messages</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-500 mb-2">$2.6B</div>
+                <p className="text-gray-600">Lost annually due to slow e-commerce sites</p>
               </div>
             </div>
-            
-            <div className="absolute -bottom-1 left-0 right-0 h-1 bg-[#EA384C]"></div>
-          </motion.div>
-          
-          {/* AI Organic Outbound - simplified box */}
-          <motion.div 
-            variants={itemVariants}
-            whileHover={{ y: -5 }}
-            className="bg-[#F9F6F3] rounded-[20px] p-8 border border-gray-100 relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 bg-convrt-purple/10 px-4 py-2 rounded-bl-2xl">
-              <Check className="w-5 h-5 text-convrt-purple" />
-            </div>
-            
-            <h3 className="heading-sm text-convrt-dark-blue mb-8 flex items-center">
-              AI Organic Outbound
-              <span className="ml-2 px-2 py-0.5 text-xs font-medium bg-convrt-purple/10 text-convrt-purple rounded-full">Convrt.ai</span>
-            </h3>
-            
-            <ul className="space-y-6">
-              <li className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-convrt-purple/10 flex items-center justify-center mt-0.5 mr-4">
-                  <Check className="w-4 h-4 text-convrt-purple" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg text-convrt-dark-blue">15x higher conversion rates</p>
-                  <p className="text-convrt-dark-blue/70 mt-1">Build trust before you reach out</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-convrt-purple/10 flex items-center justify-center mt-0.5 mr-4">
-                  <Check className="w-4 h-4 text-convrt-purple" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg text-convrt-dark-blue">Key touchpoints and discussions</p>
-                  <p className="text-convrt-dark-blue/70 mt-1">Tracks the entire buyer's journey</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-convrt-purple/10 flex items-center justify-center mt-0.5 mr-4">
-                  <Check className="w-4 h-4 text-convrt-purple" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg text-convrt-dark-blue">Fully automated growth hacking</p>
-                  <p className="text-convrt-dark-blue/70 mt-1">Enterprise-grade AI engagement</p>
-                </div>
-              </li>
-            </ul>
-            
-            <div className="mt-12 grid grid-cols-3 gap-4">
-              <div className="aspect-square flex flex-col items-center justify-center bg-convrt-purple/5 rounded-xl p-3">
-                <Users className="w-8 h-8 text-convrt-purple mb-2" />
-                <div className="text-sm text-center text-convrt-purple font-medium">Engagement</div>
-              </div>
-              
-              <div className="aspect-square flex flex-col items-center justify-center bg-convrt-purple/5 rounded-xl p-3">
-                <Zap className="w-8 h-8 text-convrt-purple mb-2" />
-                <div className="text-sm text-center text-convrt-purple font-medium">Trust Building</div>
-              </div>
-              
-              <div className="aspect-square flex flex-col items-center justify-center bg-convrt-purple/5 rounded-xl p-3">
-                <BarChart3 className="w-8 h-8 text-convrt-purple mb-2" />
-                <div className="text-sm text-center text-convrt-purple font-medium">Win More Deals</div>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-1 left-0 right-0 h-1 bg-convrt-purple"></div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

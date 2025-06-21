@@ -1,107 +1,129 @@
 
-import React, { useState } from 'react';
-import { Target, Users, LineChart } from 'lucide-react';
-import StepContent from './how-it-works/StepContent';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { Upload, Zap, Globe, BarChart3 } from 'lucide-react';
 
 const HowItWorks = () => {
-  const [activeStep, setActiveStep] = useState(1);
-
-  // Steps data
   const steps = [
     {
-      id: 1,
-      icon: <Target className="w-4 h-4" />,
-      title: "AI Identifies Where Your Buyers Engage",
-      description: "Our AI scans social media to find where your target audience is most active, identifying the exact channels, topics, and content they engage with.",
-      highlightText: "AI identifies:",
-      highlightDetails: "Relevant conversations, active communities, and engagement opportunities",
-      gifUrl: "/lovable-uploads/50d7bc89-98fd-49a5-b67f-94230c5d3ca5.png"
+      icon: <Upload className="w-8 h-8" />,
+      title: "Connect Your Repo",
+      description: "Link your GitHub repository or upload your React project directly. We support all React frameworks including Next.js, Vite, and Create React App.",
+      color: "bg-blue-500",
+      delay: 0
     },
     {
-      id: 2,
-      icon: <Users className="w-4 h-4" />,
-      title: "AI Auto-Warms & Builds Trust",
-      description: "Convrt creates meaningful touchpoints that position you as a trusted advisor by engaging with prospects' content and contributing value.",
-      highlightText: "AI automates:",
-      highlightDetails: "Targeted comments, relevant reactions, and personalized interactions",
-      gifUrl: "https://api.microlink.io?url=https%3A%2F%2Fgiphy.com%2Fgifs%2Frevolutioncomedy-handshake-revolutioncomedy-icommitcombustion-kFHbqSdogIS0qtX6Pf&embed=true&screenshot=true&meta=false"
+      icon: <Zap className="w-8 h-8" />,
+      title: "Lightning Deploy",
+      description: "Our optimized build system deploys your React app in under 30 seconds with automatic code splitting and performance optimization.",
+      color: "bg-convrt-purple",
+      delay: 0.2
     },
     {
-      id: 3,
-      icon: <LineChart className="w-4 h-4" />,
-      title: "AI Converts Warm Leads Into Pipeline",
-      description: "With pre-established trust, your outreach achieves 15x higher conversion rates, turning social connections into qualified leads and deals.",
-      highlightText: "AI delivers:",
-      highlightDetails: "Warmed leads, engagement analytics, and conversion opportunities",
-      gifUrl: "https://api.microlink.io?url=https%3A%2F%2Fgiphy.com%2Fgifs%2Fchart-jtECu4TAPnhbGv2iwx&embed=true&screenshot=true&meta=false"
+      icon: <Globe className="w-8 h-8" />,
+      title: "Global CDN",
+      description: "Your app is instantly distributed across our global edge network, ensuring blazing-fast load times for users worldwide.",
+      color: "bg-green-500",
+      delay: 0.4
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Monitor & Scale",
+      description: "Real-time analytics and automatic scaling ensure your React app performs perfectly as your traffic grows.",
+      color: "bg-orange-500",
+      delay: 0.6
     }
   ];
 
-  const handleStepClick = (stepId: number) => {
-    setActiveStep(stepId);
-  };
-
   return (
-    <section className="relative py-4 bg-white" id="how-it-works">
-      <div className="container-section py-4">
-        <div className="max-w-3xl mx-auto text-center mb-6">
-          <div className="section-tag">
-            From Ignored to Trusted
+    <section className="py-24 bg-gradient-to-br from-gray-50 to-white" id="how-it-works">
+      <div className="container-section">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-convrt-purple/10 text-convrt-purple mb-6">
+            <Zap className="w-4 h-4 mr-2" />
+            <span className="text-sm font-medium">How React Hosting Works</span>
           </div>
-          <h2 className="heading-lg text-convrt-dark-blue mb-4">
-            How <span className="gradient-text">Convrt.ai</span> Works in 3 Steps
+          
+          <h2 className="heading-lg text-convrt-dark-blue mb-6">
+            From Code to 
+            <span className="text-convrt-purple font-extrabold"> Lightning Fast</span> in Minutes
           </h2>
-          <p className="text-convrt-dark-blue/80 text-lg max-w-2xl mx-auto">
-            Our AI-driven platform automates social engagement for your sales and GTM teams, transforming cold outreach into warm connections.
+          
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Deploy your React applications with zero configuration and maximum performance. Our platform handles all the complexity so you can focus on building great features.
           </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: step.delay }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+                <div className={`${step.color} w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  {step.icon}
+                </div>
+                
+                <div className="absolute top-4 right-4 text-gray-200 font-bold text-4xl">
+                  {index + 1}
+                </div>
+                
+                <h3 className="text-xl font-bold text-convrt-dark-blue mb-4">
+                  {step.title}
+                </h3>
+                
+                <p className="text-gray-600 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+              
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                  <div className="w-8 h-0.5 bg-gradient-to-r from-convrt-purple to-convrt-purple-light"></div>
+                </div>
+              )}
+            </motion.div>
+          ))}
         </div>
-        
-        <div className="max-w-5xl mx-auto bg-gray-100 rounded-2xl overflow-hidden">
-          <div className="flex flex-col lg:flex-row h-[600px]">
-            {/* Steps Section - Now on the left */}
-            <div className="lg:w-1/3 flex flex-col gap-1 p-4 bg-gray-50">
-              {steps.map((step) => (
-                <StepContent
-                  key={step.id}
-                  stepNumber={step.id}
-                  title={step.title}
-                  description={step.description}
-                  highlightText={step.highlightText}
-                  highlightDetails={step.highlightDetails}
-                  icon={step.icon}
-                  isActive={activeStep === step.id}
-                  onClick={() => handleStepClick(step.id)}
-                />
-              ))}
-            </div>
-            
-            {/* Image Display - Now covering the entire right section */}
-            <div className="lg:w-2/3 relative h-full">
-              {steps.map((step) => (
-                <motion.div 
-                  key={step.id}
-                  className="absolute inset-0 h-full w-full"
-                  initial={{ opacity: 0 }}
-                  animate={{ 
-                    opacity: activeStep === step.id ? 1 : 0,
-                    zIndex: activeStep === step.id ? 10 : 1
-                  }}
-                  transition={{ 
-                    duration: 0.5, 
-                    ease: "easeInOut"
-                  }}
-                >
-                  <img 
-                    src={step.gifUrl} 
-                    alt={`Step ${step.id}: ${step.title}`} 
-                    className="w-full h-full object-cover object-center"
-                  />
-                </motion.div>
-              ))}
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-convrt-dark-blue mb-6">
+              Why Developers Choose React Hosting
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-convrt-purple mb-2">< 30s</div>
+                <p className="text-gray-600 font-medium">Average Deploy Time</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-convrt-purple mb-2">99.9%</div>
+                <p className="text-gray-600 font-medium">Uptime Guarantee</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-convrt-purple mb-2">180+</div>
+                <p className="text-gray-600 font-medium">Global Edge Locations</p>
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

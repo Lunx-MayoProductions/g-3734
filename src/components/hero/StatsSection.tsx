@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, BarChart2, Award } from 'lucide-react';
+import { Zap, Globe, TrendingUp } from 'lucide-react';
 import StatCard from './StatCard';
 
 interface StatsSectionProps {
@@ -40,25 +40,25 @@ const StatsSection: React.FC<StatsSectionProps> = ({ statsRef }) => {
     >
       <motion.div variants={itemVariants}>
         <StatCard 
-          value="15x" 
-          description="Higher Conversion Rates" 
+          value="5x" 
+          description="Faster Deploy Times" 
+          icon={<Zap className="w-8 h-8" />} 
+        />
+      </motion.div>
+      
+      <motion.div variants={itemVariants}>
+        <StatCard 
+          value="99.9%" 
+          description="Uptime Guarantee" 
+          icon={<Globe className="w-8 h-8" />} 
+        />
+      </motion.div>
+      
+      <motion.div variants={itemVariants}>
+        <StatCard 
+          value="40%" 
+          description="Performance Improvement" 
           icon={<TrendingUp className="w-8 h-8" />} 
-        />
-      </motion.div>
-      
-      <motion.div variants={itemVariants}>
-        <StatCard 
-          value="80%" 
-          description="Less Prospecting Time" 
-          icon={<BarChart2 className="w-8 h-8" />} 
-        />
-      </motion.div>
-      
-      <motion.div variants={itemVariants}>
-        <StatCard 
-          value="78%" 
-          description="Sales Outperformance" 
-          icon={<Award className="w-8 h-8" />} 
         />
       </motion.div>
     </motion.div>

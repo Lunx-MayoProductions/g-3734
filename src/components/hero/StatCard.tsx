@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { LucideIcon } from 'lucide-react';
 
 interface StatCardProps {
   value: string;
@@ -22,7 +21,7 @@ const StatCard: React.FC<StatCardProps> = ({ value, description, icon }) => {
           {description}
         </div>
         <div className="text-convrt-dark-blue/60 text-sm mt-2 relative z-10 leading-relaxed">
-          Turn cold prospects into warm leads through AI-driven social touchpoints
+          Deploy React apps with lightning speed and maximum performance
         </div>
       </div>
     </div>
